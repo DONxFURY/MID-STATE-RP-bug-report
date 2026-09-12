@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/apps.css">
+</head>
+<body>
+<div class="panel">
+<h2>Script Issue</h2>
+<input id="user" placeholder="Name">
+<select id="issue">
+<option>Fix script</option>
+<option>Script error</option>
+<option>UI bug</option>
+</select>
+<textarea id="desc" placeholder="Describe issue"></textarea>
+<button onclick="submit()">Submit</button>
+</div>
+
+<script src="../config.js"></script>
+<script>
+function submit(){
+send(webhooks.script,{
+content:"Script Issue",
+embeds:[{description:document.getElementById('desc').value}]
+});
+}
+</script>
+</body>
+</html>

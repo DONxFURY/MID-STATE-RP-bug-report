@@ -1,0 +1,38 @@
+body{
+margin:0;
+background:#050505;
+color:white;
+font-family:Segoe UI;
+}
+
+.home{
+text-align:center;
+padding-top:50px;
+}
+
+.logo{
+width:300px;
+margin-bottom:30px;
+}
+
+.grid{
+display:flex;
+justify-content:center;
+gap:40px;
+}
+
+.app{
+width:120px;
+cursor:pointer;
+transition:.3s;
+}
+
+.app img{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,191,255,.4);
+}
+
+.app:hover{
+transform:scale(1.1);
+}

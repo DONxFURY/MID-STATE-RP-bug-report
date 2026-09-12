@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/apps.css">
+</head>
+<body>
+<div class="panel">
+<h2>Vehicle Report</h2>
+<input id="user" placeholder="Name">
+<select id="issue">
+<option>Vehicle crashing</option>
+<option>Vehicle not loading</option>
+<option>Vehicle no sound</option>
+</select>
+<textarea id="desc" placeholder="Describe issue"></textarea>
+<button onclick="submit()">Submit</button>
+</div>
+
+<script src="../config.js"></script>
+<script>
+function submit(){
+send(webhooks.vehicle,{
+content:"Vehicle Report",
+embeds:[{description:document.getElementById('desc').value}]
+});
+}
+</script>
+</body>
+</html>
